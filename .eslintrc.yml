@@ -1,0 +1,186 @@
+root: true
+parser: babel-eslint
+parserOptions:
+  ecmaVersion: 6
+  sourceType: module
+  ecmaFeatures:
+    impliedStrict: true
+rules:
+  no-console: off
+  no-plusplus: error
+  no-nested-ternary: off
+  no-unexpected-multiline: error
+  comma-dangle:
+    - error
+    - always-multiline
+  semi:
+    - error
+    - never
+  no-restricted-syntax:
+    - error
+    - selector: VariableDeclaration[kind!='const']
+      message: var and let are not allowed
+    - selector: FunctionExpression
+      message: function statements are not allowed
+    - selector: FunctionDeclaration
+      message: function statements are not allowed
+    - selector: IfStatement
+      message: if statements are not allowed
+    - selector: WhileStatement
+      message: while statements are not allowed
+    - selector: ForStatement
+      message: for statements are not allowed
+    - selector: switch
+      message: switch statements are not allowed
+    - selector: TryStatement
+      message: try catch blocks are not allowed
+    - selector: ClassDeclaration
+      message: classes are not allowed
+    - selector: AssignmentExpression[left.property.name!='exports']
+      message: mutations are not allowed
+  max-len:
+    - error
+    - code: 80
+      tabWidth: 2
+      ignoreUrls: true
+      ignoreRegExpLiterals: true
+  accessor-pairs: off
+  array-callback-return:
+    - error
+    - allowImplicit: true
+  block-scoped-var: error
+  complexity:
+    - error
+    - 10
+  class-methods-use-this: error
+  consistent-return: error
+  curly:
+    - error
+    - multi-line
+  default-case:
+    - error
+    - commentPattern: ^no default$
+  dot-notation:
+    - error
+    - allowKeywords: true
+  dot-location:
+    - error
+    - property
+  eqeqeq:
+    - error
+    - always
+  guard-for-in: error
+  max-classes-per-file: error
+  no-alert: error
+  no-caller: error
+  no-case-declarations: error
+  no-div-regex: off
+  no-else-return:
+    - error
+    - allowElseIf: false
+  no-empty-function: error
+  no-empty-pattern: error
+  no-eq-null: off
+  no-eval: error
+  no-extend-native: error
+  no-extra-bind: error
+  no-extra-label: error
+  no-fallthrough: error
+  no-floating-decimal: error
+  no-global-assign: error
+  no-native-reassign: error
+  no-implicit-coercion:
+    - error
+    - boolean: false
+  no-implicit-globals: off
+  no-implied-eval: error
+  no-invalid-this: error
+  no-iterator: error
+  no-labels: error
+  no-lone-blocks: error
+  no-loop-func: error
+  no-magic-numbers:
+    - off
+    - ignore: []
+      ignoreArrayIndexes: true
+      enforceConst: true
+      detectObjects: false
+  no-multi-spaces:
+    - error
+    - ignoreEOLComments: false
+  no-multi-str: error
+  no-new: error
+  no-new-func: error
+  no-new-wrappers: error
+  no-octal: error
+  no-octal-escape: error
+  no-param-reassign:
+    - error
+    - props: true
+  no-proto: error
+  no-redeclare: error
+  no-restricted-properties:
+    - error
+    - object: arguments
+      property: callee
+      message: arguments.callee is deprecated
+    - object: global
+      property: isFinite
+      message: Please use Number.isFinite instead
+    - object: self
+      property: isFinite
+      message: Please use Number.isFinite instead
+    - object: window
+      property: isFinite
+      message: Please use Number.isFinite instead
+    - object: global
+      property: isNaN
+      message: Please use Number.isNaN instead
+    - object: self
+      property: isNaN
+      message: Please use Number.isNaN instead
+    - object: window
+      property: isNaN
+      message: Please use Number.isNaN instead
+    - property: __defineGetter__
+      message: Please use Object.defineProperty instead.
+    - property: __defineSetter__
+      message: Please use Object.defineProperty instead.
+    - object: Math
+      property: pow
+      message: Use the exponentiation operator (**) instead.
+  no-return-assign: off
+  no-return-await: error
+  no-script-url: error
+  no-self-assign: error
+  no-self-compare: error
+  no-sequences: off
+  no-throw-literal: error
+  no-unmodified-loop-condition: error
+  no-unused-expressions: error
+  no-unused-labels: error
+  no-useless-call: error
+  no-useless-catch: off
+  no-useless-concat: error
+  no-useless-escape: error
+  no-useless-return: error
+  no-void: error
+  no-warning-comments:
+    - warn
+    - terms:
+        - todo
+        - fixme
+      location: start
+  no-with: error
+  prefer-promise-reject-errors:
+    - error
+    - allowEmptyReject: true
+  radix: error
+  require-await: error
+  require-unicode-regexp: off
+  vars-on-top: error
+  wrap-iife:
+    - error
+    - inside
+    - functionPrototypeMethods: false
+  yoda: error

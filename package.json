@@ -1,0 +1,37 @@
+{
+  "name": "@sullux/aws-sdk",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=8.*"
+  },
+  "description": "A wrapper for the woefully inadequate aws-sdk library from Amazon.",
+  "keywords": [
+    "aws",
+    "sdk",
+    "amazon"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack --config webpack.config.js",
+    "package": "npm run build && node ./package.js && cp README.md dist/",
+    "unit": "./node_modules/.bin/mocha ./lib/**/*.spec.js",
+    "lint": "./node_modules/.bin/eslint *.js ./lib/**/*.js",
+    "fix": "./node_modules/.bin/eslint *.js ./lib/**/*.js --fix",
+    "test": "npm run lint && npm run unit",
+    "deploy": "npm test && npm run package && cd dist && npm publish --access public"
+  },
+  "author": "Charles Sullivan <sullux@gmail.com> (https://github.com/Sullux)",
+  "license": "MIT",
+  "repository": "sullux/aws-sdk",
+  "homepage": "https://github.com/Sullux/aws-sdk/blob/master/README.md",
+  "dependencies": {},
+  "devDependencies": {
+    "aws-sdk": "^2.422.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.14.1",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  }
+}
