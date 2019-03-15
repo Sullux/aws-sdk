@@ -57,7 +57,7 @@ const saveRecords = async (tableName, records) =>
   await Promise.all(
     records
       .map(record => ({ TableName: tableName, Item: record }))
-      .map(params => documentClient.put(params).promise().catch(fixedError)
+      .map(params => documentClient.put(params).promise().catch(fixedError))
   )
 
 // The new way
