@@ -83,3 +83,13 @@ const s3 = new AWS.S3({ region: 'us-west-2' })
 const aws = require('@sullux/aws-sdk')({ region: 'us-west-2' })
 const { dynamoDB, s3 } = aws
 ```
+
+## Next Version
+
+The next version of the AWS SDK is in [developer preview](https://aws.amazon.com/blogs/developer/new-aws-sdk-for-javascript-developer-preview/). It can be installed with
+
+```bash
+npm install --save @aws-sdk/client-dynamodb-v2-node@preview
+```
+
+We will evaluate this new library and see if there are any weeknesses we will need to work around.
