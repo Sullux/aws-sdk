@@ -1,6 +1,6 @@
 {
   "name": "@sullux/aws-sdk",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "engines": {
     "node": ">=8.*"
   },
@@ -24,9 +24,12 @@
   "license": "MIT",
   "repository": "sullux/aws-sdk",
   "homepage": "https://github.com/Sullux/aws-sdk/blob/master/README.md",
+  "peerDependencies": {
+    "aws-sdk": "*"
+  },
   "dependencies": {},
   "devDependencies": {
-    "aws-sdk": "^2.422.0",
+    "aws-sdk": "^2.488.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.14.1",
     "mocha": "^6.0.2",

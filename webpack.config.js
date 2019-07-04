@@ -1,9 +1,10 @@
 const { join } = require('path')
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: './index.js',
   externals: 'aws-sdk',
+  devtool: 'source-map',
   output: {
     path: join(__dirname, 'dist'),
     filename: 'index.js',
