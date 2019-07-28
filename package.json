@@ -32,7 +32,7 @@
     "aws-sdk": "^2.488.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.14.1",
-    "mocha": "^6.0.2",
+    "mocha": "^6.2.0",
     "nyc": "^13.3.0",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3"
