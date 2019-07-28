@@ -2,6 +2,7 @@
 
 This library is a wrapper for the woefully inadequate aws-sdk library from Amazon. This wrapper does the following:
 
+* Adds a major performance enhancement as detailed in [this post on Medium](https://medium.com/theburningmonk-com/lambda-optimization-tip-enable-http-keep-alive-5c55810f70fe)
 * Turns all classes into enumerable properties of the top-level instance,
 * Eliminates the need for instantiation of classes,
 * Turns all functions into enumerable properties that are properly bound,
