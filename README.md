@@ -1,6 +1,6 @@
 # @sullux/aws-sdk
 
-This library is a wrapper for the woefully inadequate aws-sdk library from Amazon. This wrapper does the following:
+This library is a wrapper for the woefully inadequate aws-sdk library from Amazon. You can read about it in my [Medium article](https://medium.com/@sullux/a-better-aws-sdk-d71d4aa156f0). This wrapper does the following:
 
 * Adds a major performance enhancement as detailed in [this post on Medium](https://medium.com/theburningmonk-com/lambda-optimization-tip-enable-http-keep-alive-5c55810f70fe)
 * Turns all classes into enumerable properties of the top-level instance,
@@ -20,7 +20,7 @@ npm i --save @sullux/aws-sdk
 yarn add @sullux/aws-sdk
 ```
 
-NOTE: this library assumes you have the full AWS SDK already installed. If not, you will need to install it separately with `npm i --save aws-sdk`. If you are planning to deploy to Lambda, you can make the official SDK a _dev_ dependency instead of a primary dependency with `npm i --save-dev aws-sdk`. Either way, your app must be able to `require('aws-sdk')` in order for `require('@sullux/aws-sdk')` to work.
+NOTE: this library assumes you have the full AWS SDK already installed. If not, you will need to install it separately with `npm i --save aws-sdk` or `yarn add aws-sdk`. If you are planning to deploy to Lambda, you can make the official SDK a _dev_ dependency instead of a primary dependency with `npm i --save-dev aws-sdk` or `yarn add --dev aws-sdk`. Either way, your app must be able to `require('aws-sdk')` in order for `require('@sullux/aws-sdk')` to work.
 
 ## Usage
 
